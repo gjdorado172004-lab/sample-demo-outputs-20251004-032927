@@ -1,0 +1,60 @@
+LinuxZoo Terminal Session Log
+=============================
+Date: 2025-10-04
+User: student
+Host: linuxzoo-server
+
+$ whoami
+student
+
+$ pwd
+/home/student
+
+$ ls -la
+total 32
+drwxr-xr-x 5 student student 4096 Oct  4 10:30 .
+drwxr-xr-x 3 root    root    4096 Oct  1 09:15 ..
+-rw-r--r-- 1 student student  220 Oct  1 09:15 .bash_logout
+-rw-r--r-- 1 student student 3771 Oct  1 09:15 .bashrc
+drwxr-xr-x 2 student student 4096 Oct  4 10:25 Documents
+drwxr-xr-x 2 student student 4096 Oct  4 10:26 projects
+-rw-r--r-- 1 student student  807 Oct  1 09:15 .profile
+
+$ cat /etc/os-release
+NAME="Ubuntu"
+VERSION="22.04.3 LTS (Jammy Jellyfish)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 22.04.3 LTS"
+VERSION_ID="22.04"
+VERSION_CODENAME=jammy
+
+$ uname -a
+Linux linuxzoo-server 5.15.0-87-generic #97-Ubuntu SMP Mon Oct 2 21:09:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        20G  8.5G   11G  45% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           798M  1.2M  797M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+
+$ ps aux | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 168948 11864 ?        Ss   09:15   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    09:15   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   09:15   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   09:15   0:00 [rcu_par_gp]
+student     1234  0.0  0.1  21532  5164 pts/0    Ss   10:30   0:00 -bash
+student     1456  0.0  0.0  19116  3428 pts/0    R+   10:35   0:00 ps aux
+student     1457  0.0  0.0   6480   896 pts/0    S+   10:35   0:00 head -10
+
+$ netstat -tuln | grep LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+tcp6       0      0 :::80                   :::*                    LISTEN
+
+$ exit
+logout
+Session ended at 10:45:23
