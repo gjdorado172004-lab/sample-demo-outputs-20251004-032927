@@ -1,0 +1,45 @@
+Replit Console Output Log
+=========================
+Workspace: sample-demo-project
+Language: Python 3.11
+Date: 2025-10-04 10:45:00 UTC
+
+> python replit_sample_code.py
+
+Replit Sample Code Execution
+========================================
+
+Fibonacci sequence (first 10 numbers):
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+Factorial of 5:
+120
+
+Prime numbers between 1 and 20:
+[2, 3, 5, 7, 11, 13, 17, 19]
+
+Program completed successfully!
+
+Process exited with code 0
+
+---
+
+> python -V
+Python 3.11.13
+
+> pip list
+Package    Version
+---------- -------
+pip        24.0
+setuptools 69.5.1
+wheel      0.43.0
+
+> ls -la
+total 24
+drwxr-xr-x 3 runner runner 4096 Oct  4 10:45 .
+drwxr-xr-x 8 runner runner 4096 Oct  4 10:30 ..
+-rw-r--r-- 1 runner runner  756 Oct  4 10:45 replit_sample_code.py
+-rw-r--r-- 1 runner runner  234 Oct  4 10:40 main.py
+drwxr-xr-x 2 runner runner 4096 Oct  4 10:35 .config
+
+Replit environment ready.
