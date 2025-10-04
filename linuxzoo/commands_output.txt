@@ -1,0 +1,41 @@
+LinuxZoo Command Examples and Outputs
+======================================
+
+Command: grep "error" /var/log/syslog
+Output:
+Oct  4 09:23:15 linuxzoo-server systemd[1]: error processing /etc/systemd/system/custom.service
+Oct  4 10:15:32 linuxzoo-server kernel: [12345.678901] error: device eth0 not ready
+
+Command: find /home/student -name "*.txt"
+Output:
+/home/student/Documents/notes.txt
+/home/student/projects/readme.txt
+/home/student/projects/data/output.txt
+
+Command: top -bn1 | head -20
+Output:
+top - 10:40:15 up  1:25,  2 users,  load average: 0.23, 0.45, 0.38
+Tasks: 142 total,   1 running, 141 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.3 us,  1.1 sy,  0.0 ni, 96.2 id,  0.3 wa,  0.0 hi,  0.1 si,  0.0 st
+MiB Mem :   3916.2 total,   1234.5 free,   1456.7 used,   1225.0 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   2234.8 avail Mem
+
+Command: du -sh /home/student/*
+Output:
+4.0K    /home/student/Documents
+8.0K    /home/student/projects
+120K    /home/student/.cache
+
+Command: systemctl status ssh
+Output:
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2025-10-04 09:15:23 UTC; 1h 25min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 1234 (sshd)
+      Tasks: 1 (limit: 4915)
+     Memory: 5.2M
+        CPU: 120ms
+     CGroup: /system.slice/ssh.service
+             └─1234 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
